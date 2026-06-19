@@ -1,0 +1,32 @@
+{
+  "name": "Email Writer Assistant",
+  "description": "AI-Powered email writing assistant that helps you compose professional emails quickly and efficiently.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://localhost:8080/*",
+    "*://outlook.office.com/*",
+    "*://outlook.cloud.microsoft/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://outlook.office.com/*", "*://outlook.cloud.microsoft/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["*://outlook.office.com/*", "*://outlook.cloud.microsoft/*"]
+    }
+  ],
+  "action": {
+    "default_title": "Email Writer Assistant"
+  }
+}
