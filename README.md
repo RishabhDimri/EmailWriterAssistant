@@ -76,7 +76,4 @@ Follow these steps to run the entire ecosystem locally.
 4. Select the `email-writer-chrome-extension` folder from this repository.
 5. Open Microsoft Outlook on the web to see the extension in action!
 
----
 
-## 📝 License
-This project is licensed under the MIT License.
